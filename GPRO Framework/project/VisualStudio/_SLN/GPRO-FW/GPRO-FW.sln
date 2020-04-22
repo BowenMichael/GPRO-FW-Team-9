@@ -6,9 +6,12 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GPRO-FW-Launcher", "..\..\GPRO-FW-Launcher\GPRO-FW-Launcher.vcxproj", "{158EE8B2-0B97-423C-BC9E-8ED5BE594B37}"
 	ProjectSection(ProjectDependencies) = postProject
 		{30709B2C-20C5-40F5-A78E-D8F93830E41A} = {30709B2C-20C5-40F5-A78E-D8F93830E41A}
+		{7A1818F7-5616-49A0-9CC1-C0F086486BD7} = {7A1818F7-5616-49A0-9CC1-C0F086486BD7}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GPRO-FW", "..\..\GPRO-FW\GPRO-FW\GPRO-FW.vcxproj", "{30709B2C-20C5-40F5-A78E-D8F93830E41A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GPRO-FW-TicTacToe", "..\..\GPRO-FW-TicTacToe\GPRO-FW-TicTacToe\GPRO-FW-TicTacToe.vcxproj", "{7A1818F7-5616-49A0-9CC1-C0F086486BD7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,6 +37,14 @@ Global
 		{30709B2C-20C5-40F5-A78E-D8F93830E41A}.Release|x64.Build.0 = Release|x64
 		{30709B2C-20C5-40F5-A78E-D8F93830E41A}.Release|x86.ActiveCfg = Release|Win32
 		{30709B2C-20C5-40F5-A78E-D8F93830E41A}.Release|x86.Build.0 = Release|Win32
+		{7A1818F7-5616-49A0-9CC1-C0F086486BD7}.Debug|x64.ActiveCfg = Debug|x64
+		{7A1818F7-5616-49A0-9CC1-C0F086486BD7}.Debug|x64.Build.0 = Debug|x64
+		{7A1818F7-5616-49A0-9CC1-C0F086486BD7}.Debug|x86.ActiveCfg = Debug|Win32
+		{7A1818F7-5616-49A0-9CC1-C0F086486BD7}.Debug|x86.Build.0 = Debug|Win32
+		{7A1818F7-5616-49A0-9CC1-C0F086486BD7}.Release|x64.ActiveCfg = Release|x64
+		{7A1818F7-5616-49A0-9CC1-C0F086486BD7}.Release|x64.Build.0 = Release|x64
+		{7A1818F7-5616-49A0-9CC1-C0F086486BD7}.Release|x86.ActiveCfg = Release|Win32
+		{7A1818F7-5616-49A0-9CC1-C0F086486BD7}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

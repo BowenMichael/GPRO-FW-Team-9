@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <iostream>
 #include "GPRO-FW.h"
-#include "GPRO-FW-TicTacToe.cpp"
+#include "GPRO-FW-TicTacToe.h"
 
 using namespace std;
 
@@ -13,11 +13,12 @@ int main()
 {
 	cout << "Welcome to the game selection menu" << endl;
 	bool active = true;
+	int num;
 	do {
 		switch (menu())
 		{
 		case 1:
-			launchTicTacToe();
+			num = launchTicTacToe();
 		default:
 			break;
 		}
