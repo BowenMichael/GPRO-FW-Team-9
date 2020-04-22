@@ -1,7 +1,7 @@
 #pragma once
 #include "GPRO-FW-TicTacToe.h"
 
-
+int turns = 0;
 //-----------------------------------------------------------------------------
 // DEFINITIONS
 
@@ -40,6 +40,7 @@ gs_tictactoe_space_state input(gs_tictactoe_space_state plr, gs_tictactoe game) 
 		else
 			cout << "That Cell is full for doesn't egsit please try another." << endl;
 	}
+	turns++;
 	return plr;
 }
 
@@ -126,6 +127,15 @@ bool checkDiagonal(gs_tictactoe game, gs_tictactoe_space_state player)
 	return false;
 }
 
+bool checkTie()
+{
+	if (turns >= MAX_TURNS) {
+		cout << "Cats Game!" << endl;
+		return true;
+	}
+	return false;
+}
+
 void winOutput(gs_tictactoe_space_state player)
 {
 	cout << "Winner Winner!!!" << endl;
@@ -142,7 +152,7 @@ int launchTicTacToe()
 	gs_tictactoe_space_state player = gs_tictactoe_space_x;
 	
 	while (active) {
-		if (checkForWin(game, gs_tictactoe_space_x) || checkForWin(game, gs_tictactoe_space_o)) {
+		if (checkForWin(game, gs_tictactoe_space_x) || checkForWin(game, gs_tictactoe_space_o) || checkTie()) {
 			active = false;
 			break;
 		}

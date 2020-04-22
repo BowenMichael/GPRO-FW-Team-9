@@ -70,6 +70,7 @@ bool playItem(gs_tictactoe_space_state turnState, gs_tictactoe game);
 bool checkHorizontal(gs_tictactoe game, gs_tictactoe_space_state player);
 bool checkVectical(gs_tictactoe game, gs_tictactoe_space_state player);
 bool checkDiagonal(gs_tictactoe game, gs_tictactoe_space_state player);
+bool checkTie();
 void winOutput(gs_tictactoe_space_state player);
 
 
@@ -77,3 +78,5 @@ const int POINTS_TO_WIN = 3;
 const string X_DISPLAY = " X ";
 const string O_DISPLAY = " O ";
 const string OPEN_DISPLAY = "[ ]";
+const int MAX_TURNS = 9;
+
