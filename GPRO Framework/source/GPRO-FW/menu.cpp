@@ -11,7 +11,7 @@ int menu() {
 void printMenu() {
 	printListItem("Menu");
 	printListItem("[1] Play Tic-Tac-Toe");
-	printListItem("[2] Play Checkers");
+	printListItem("[2] Play Battleship");
 }
 
 void printListItem(string outputText)

@@ -5,8 +5,6 @@
 //-----------------------------------------------------------------------------
 // DEFINITIONS
 
-
-
 void displayGameBoard(gs_tictactoe game) {
 	cout << endl << "-----------" << endl;
 	for (int xpos = 0; xpos < GS_TICTACTOE_BOARD_WIDTH; ++xpos){

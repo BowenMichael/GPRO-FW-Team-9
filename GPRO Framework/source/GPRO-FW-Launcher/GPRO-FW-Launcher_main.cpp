@@ -6,6 +6,7 @@
 #include <iostream>
 #include "GPRO-FW.h"
 #include "GPRO-FW-TicTacToe.h"
+#include "GPRO-FW-Battleship.h"
 
 using namespace std;
 
@@ -19,6 +20,9 @@ int main()
 		{
 		case 1:
 			num = launchTicTacToe();
+			break;
+		case 2:
+			num = launchBattleship();
 		default:
 			break;
 		}
