@@ -1,6 +1,10 @@
-
+#pragma once
 #include <stdio.h>
+#include <stdlib.h>
+#include <iostream>
+#include <iomanip>
 
+using namespace std;
 
 //-----------------------------------------------------------------------------
 // DECLARATIONS
@@ -59,6 +63,30 @@ inline gs_tictactoe_index gs_tictactoe_reset(gs_tictactoe game)
 
 //-----------------------------------------------------------------------------
 // DEFINITIONS
+int gameController(int player) {
+	if (player == 1) {
+		return 2;
+	}
+	else if (player == 2) {
+		return 1;
+	}
+	return 0; 
+}
+
+
+void displayGameBoard(gs_tictactoe game) {
+	for (int i = 0; i < GS_TICTACTOE_BOARD_HEIGHT - 1; i++) {
+		for (int j = 0; j < GS_TICTACTOE_BOARD_WIDTH - 1; i++) {
+			 int cellState = gs_tictactoe_getSpaceState(game, i, j);
+			 cout << cellState << "|";
+		}
+		cout << endl << "-----------" << endl;
+	}
+}
+
+void input(int plr) {
+
+}
 
 int launchTicTacToe()
 {
@@ -66,13 +94,19 @@ int launchTicTacToe()
 
 	gs_tictactoe_reset(game);
 
-	//Psedo code
-	//Update
-	//Display
-	//Input
+	cout << "Tic Tac Toe has been launched" << endl;
+	bool active = true;
+	int player = 1;
+	
+	while (active) {
+		//player = gameController(player);
+		displayGameBoard(game);
+	}
+
 
 	return 0;
 }
+
 
 
 //-----------------------------------------------------------------------------
