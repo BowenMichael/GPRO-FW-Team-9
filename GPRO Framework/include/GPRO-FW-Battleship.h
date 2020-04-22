@@ -1,6 +1,11 @@
 
+#pragma once
 #include <stdio.h>
+#include <stdlib.h>
+#include <iostream>
+#include <iomanip>
 
+using namespace std;
 
 //-----------------------------------------------------------------------------
 // DECLARATIONS
@@ -8,6 +13,7 @@
 #define GS_BATTLESHIP_PLAYERS				2
 #define GS_BATTLESHIP_BOARD_WIDTH			10
 #define GS_BATTLESHIP_BOARD_HEIGHT			10
+
 
 enum gs_battleship_space_state
 {
@@ -61,25 +67,41 @@ inline gs_battleship_index gs_battleship_reset(gs_battleship game)
 			for (ypos = 0; ypos < GS_BATTLESHIP_BOARD_HEIGHT; ++ypos)
 				game[player][xpos][ypos] = gs_battleship_space_open;
 	total = (player * xpos * ypos);
+	cout << (int)player << endl;
+	//battleshipPlayerPoints[0] = 0;
+	//battleshipPlayerPoints[1] = 0;
+
 	return total;
 }
 
 
-//-----------------------------------------------------------------------------
-// DEFINITIONS
 
-int launchBattleship()
-{
-	gs_battleship game = { 0 };
+//2gs_battleship_space_state testForHit(gs_battleship_space_state cell);
+void displayGameBoard(gs_battleship game, gs_battleship_index player);
+gs_battleship_index input(gs_battleship_index plr, gs_battleship game);
+int battleshipAskForColoum();
+int battleshipAskForRow();
+bool playItem(gs_battleship_index plr, gs_battleship game);
+bool testForHit(gs_battleship game, int row, int col, gs_battleship_index plr);
+void winOutput(gs_battleship_index player);
+int launchBattleship();
+void setUpShips(gs_battleship game, gs_battleship_index player);
+bool askIfHorizontal();
+bool placeShip(int col, int row, bool isHorizontal, 
+	gs_battleship_space_state ship, int sizeOfShip, 
+	gs_battleship game, gs_battleship_index player);
+void displayOpposingBoard(gs_battleship game, gs_battleship_index player);
 
-	gs_battleship_reset(game);
+
+const string BATTLESHIP_PAGE_WIDTH = "----------------------------------------";
+const string BATTLESHIP_HIT_DISPLAY = " X ";
+const string BATTLESHIP_MISS_DISPLAY = " O ";
+const string BATTLESHIP_OPEN_DISPLAY = "[ ]";
+const string BATTLESHIP_PATROL_DISPLAY = " P ";
+const string BATTLESHIP_SUBMARINE_DISPLAY = " S ";
+const string BATTLESHIP_DESTROYER_DISPLAY = " D ";
+const string BATTLESHIP_BATTLESHIP_DISPLAY = " B ";
+const string BATTLESHIP_CARRIER_DISPLAY = " C ";
+const int MAX_POINTS = 17;
 
 
-
-
-
-	return 0;
-}
-
-
-//-----------------------------------------------------------------------------
